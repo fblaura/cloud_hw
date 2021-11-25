@@ -1,0 +1,13 @@
+name: model-hw-aml
+channels:
+    - defaults
+    - pytorch
+dependencies:
+    - python=3.8
+    - scikit-learn
+    - pandas
+    - numpy
+    - pip
+    - pip:
+        - azureml-core
+        - azureml-defaults

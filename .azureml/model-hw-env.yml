@@ -1,0 +1,12 @@
+name: model-hw-env
+channels:
+    - defaults
+    - pytorch
+dependencies:
+    - python=3.8
+    - scikit-learn
+    - pandas
+    - numpy
+    - pip
+
+
