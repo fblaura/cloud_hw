@@ -52,3 +52,14 @@ Una vez conectado con Azure es posible entrenar un modelo en local (en caso de q
 ## Registro y despliegue de modelo 
 
 Al haber entrenado efectivamente el modelo con Azure, es posible hacer un registro del modelo (el archivo .py queda registrado en la carpeta de este repositorio), que queda guardado con un nombre determinados y unas etiquetas que hacen referencia a las métricas obtenidas durante la ejecución del modelo. La ruta del modelo que se utiliza para el registro hace relación a las salidas obtenida del entrenamiento del modelo, pues una vez termina de hacer entrenamiento con la partición de entrenamiento (X_train y Y_train) es posible salvar el modelo como un archivo pickle que será usado más adelante. El registro del modelo se puede ver a continuación: 
+
+![alt text](https://github.com/fblaura/cloud_hw/blob/main/images/Models.PNG)
+
+Por último, una vez se hace el registro del modelo es posible hacer el despliegue, el cual crea un servicio con un endpoint que luego será usado para probar con ayuda del postman. El formato del despliegue requiere un archivo que relaciona la forma en como recibirá los datos para hacer una predicción puntual, debido a que la predicción se hace a través de postman es necesario detallar los datos de prueba en formato JSON.
+
+El endpoint que se obtuvo se puede ver a continuación: 
+![alt text](https://github.com/fblaura/cloud_hw/blob/main/images/Endpoint.PNG)
+
+Por último, la prueba en postman nos entrega un valor predicho para la raíz de la ecuación caracteristica del sistema eléctrico. En este caso, el valor obtenido demuestra que el sistema eléctrico en estas condiciones es inestable (debido a su valor positivo). 
+![alt text](https://github.com/fblaura/cloud_hw/blob/main/images/Postman.PNG)
+
